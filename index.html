@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistance — Mon Kawa</title>
+<meta name="description" content="Assistance de l'app Mon Kawa : questions fréquentes, sauvegarde, notifications, contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#F5F0E8; --terracotta:#C4532D; --espresso:#1A120C;
+    --olive:#6B7A4F; --ambre:#D99A2B; --blancCasse:#FBF9F5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--creme); color:var(--espresso);
+    font-family:'Inter',system-ui,sans-serif; font-size:17px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:24px 24px 96px}
+  header{padding:72px 0 56px}
+  .cup{display:block;margin-bottom:32px}
+  h1{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:clamp(38px,9vw,52px);line-height:1.05;letter-spacing:-.02em;
+  }
+  .punch{margin-top:16px;font-size:19px;color:var(--terracotta);font-weight:500}
+  h2{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:15px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--terracotta);margin:0 0 20px;
+  }
+  section{margin-top:56px}
+  .card{
+    background:var(--blancCasse);border-radius:28px;padding:28px;
+    margin-bottom:14px;box-shadow:0 1px 2px rgba(26,18,12,.05);
+  }
+  .card h3{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:20px;line-height:1.25;margin-bottom:10px;letter-spacing:-.01em;
+  }
+  .card p{color:#4A3C31}
+  .card p + p{margin-top:12px}
+  .btn{
+    display:block;text-align:center;background:var(--espresso);color:var(--creme);
+    text-decoration:none;font-weight:600;padding:19px 24px;border-radius:999px;
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn:focus-visible{outline:3px solid var(--terracotta);outline-offset:3px}
+  a{color:var(--terracotta)}
+  footer{
+    margin-top:72px;padding-top:28px;border-top:1px solid rgba(26,18,12,.12);
+    font-size:14px;color:#7A6A5C;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg class="cup" width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+      <path d="M8 20h30v14a12 12 0 0 1-12 12h-6a12 12 0 0 1-12-12V20Z" stroke="#1A120C" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M38 24h4a6 6 0 0 1 0 12h-4" stroke="#1A120C" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M18 13c0-3 4-3 4-6M28 13c0-3 4-3 4-6" stroke="#C4532D" stroke-width="3.5" stroke-linecap="round"/>
+    </svg>
+    <h1>Assistance<br>Mon&nbsp;Kawa</h1>
+    <p class="punch">Ton café. Rien d'autre.</p>
+  </header>
+
+  <section>
+    <h2>Questions fréquentes</h2>
+
+    <div class="card">
+      <h3>Le timer ne me prévient pas quand l'écran est verrouillé</h3>
+      <p>Mon Kawa envoie une notification sonore à chaque fin d'étape, même app fermée. Il faut pour ça avoir autorisé les notifications : Réglages de l'iPhone → Mon Kawa → Notifications.</p>
+      <p>Sans autorisation, le timer fonctionne quand même, mais en vibrations seules, écran allumé.</p>
+    </div>
+
+    <div class="card">
+      <h3>Où sont stockées mes données ?</h3>
+      <p>Sur ton iPhone, uniquement. Pas de compte, pas de serveur, aucune donnée envoyée nulle part. Personne d'autre que toi n'y a accès — pas même moi.</p>
+    </div>
+
+    <div class="card">
+      <h3>Comment sauvegarder mon carnet ?</h3>
+      <p>Réglages → Exporter mes données. Tu obtiens un fichier contenant tes cafés, tes recettes et tes photos, que tu enregistres où tu veux (Fichiers, iCloud Drive, mail).</p>
+      <p>Pour le restaurer : Réglages → Importer une sauvegarde. L'import remplace les données actuelles, une confirmation te le rappelle.</p>
+    </div>
+
+    <div class="card">
+      <h3>J'ai changé d'iPhone / réinstallé l'app</h3>
+      <p>Comme rien n'est stocké en ligne, une désinstallation efface tout. Importe ta dernière sauvegarde pour tout retrouver, photos comprises.</p>
+    </div>
+
+    <div class="card">
+      <h3>Mes photos ont disparu</h3>
+      <p>Si tu as désinstallé puis réinstallé l'app, les fichiers photos sont partis avec. Les fiches restent, avec un ☕️ à la place de l'image. Un import de sauvegarde les rétablit.</p>
+    </div>
+
+    <div class="card">
+      <h3>Pourquoi mon café est passé en « Fatigué » ?</h3>
+      <p>Le badge se calcule depuis la date d'ouverture du paquet : frais avant 14 jours, à finir jusqu'à 28, fatigué au-delà. Tu peux corriger la date à tout moment depuis la fiche du café.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Une autre question</h2>
+    <div class="card">
+      <h3>Écris-moi</h3>
+      <p>Un bug, une idée, une méthode que tu aimerais voir arriver ? Réponse rapide, toujours par un humain.</p>
+      <p style="margin-top:20px"><a class="btn" href="mailto:soghomoniantom@gmail.com?subject=Mon%20Kawa">soghomoniantom@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Mon Kawa — version 1.1.0</span>
+    <a href="./confidentialite.html">Confidentialité</a>
+  </footer>
+
+</div>
+</body>
+</html>
